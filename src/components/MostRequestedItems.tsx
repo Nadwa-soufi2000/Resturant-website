@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Plus } from "lucide-react"
+import Title from "./Title"
 
 export default function MostRequestedItems() {
   const products = [
@@ -38,37 +39,30 @@ export default function MostRequestedItems() {
 
   return (
     <main className=" bg-background py-12 px-4">
-      <div className="mx-auto w-[1228px] flex flex-col justify-center items-center">
-        {/* Section Title */}
-        <div className="flex justify-center items-center w-[212px] h-[90px] relative">
-          <h2 className="font-bold text-[32px] text-[#2F2A25]">
-            الأكثر طلباً
-            <img src="/curve.png" alt="" className="w-[211] h-[84px] absolute top-0 right-0"/>
-          </h2>
-        </div>
-
+      <div className="mx-auto w-[1228px] flex flex-col justify-center items-center gap-6">
+        <Title title="الأكثر طلباً"/>
         {/* Product Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {products.map((product) => (
             <Card
               key={product.id}
-              className="overflow-hidden relative bg-card shadow-lg hover:shadow-xl rounded-2xl transition-shadow duration-300 flex flex-col"
+              className="overflow-hidden relative bg-card shadow-lg hover:shadow-xl rounded-2xl transition-shadow flex flex-col duration-300 transition hover:scale-[1.05] ease-in-out "
               style={{
                 width: "368.67px",
                 height: "422px",
                 maxWidth: "100%",
               }}
             >
-                {/* Discount Badge */}
-                <div className="absolute z-[1] top-0 left-0 bg-[#FE942A] flex justify-center items-center w-[44px] h-[44px] text-white rounded-[22px] text-[14px] font-bold">
-                  {product.discount}
-                </div>
+              {/* Discount Badge */}
+              <div className="absolute z-[1] top-0 left-0 bg-[#FE942A] flex justify-center items-center w-[44px] h-[44px] text-white rounded-[22px] text-[14px] font-bold">
+                {product.discount}
+              </div>
               {/* Image Container */}
               <div className=" relative w-full h-[199px] overflow-hidden">
                 <img
                   src={product.image || "/placeholder.svg"}
                   alt={product.title}
-                  className="w-[96%] h-full mx-auto"
+                  className="w-[96%] h-full mx-auto rounded-tl-2xl rounded-tr-2xl"
                 />
                 {/* Subscription Badge */}
                 <div className="absolute top-3 right-3 w-[100px] h-[27px] font-medium bg-white/20 text-center text-white px-3 py-1 rounded text-[10px]">
