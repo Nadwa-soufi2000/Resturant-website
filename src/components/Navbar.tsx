@@ -20,7 +20,7 @@ export default function Navbar() {
             <li className="font-normal text-[18px] text-[#6F675F] hover:text-[#2F2A25] hover:font-bold duration-200 ease-in-out">الأصناف</li>
             <li className="font-normal text-[18px] text-[#6F675F] hover:text-[#2F2A25] hover:font-bold duration-200 ease-in-out">القائمة</li>
           </ul>
-          <img src="/Navlogo.png" alt="" className="w-[65px] h-[50px]"/>
+          <img src="/Navlogo.png" alt="" className="w-[96px] h-[73px]"/>
         </div>
     </div>
   )

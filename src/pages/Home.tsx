@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import MostRequestedItems from "@/components/MostRequestedItems";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero/>
+      <MostRequestedItems />
       <Footer/>
     </div>
   )
