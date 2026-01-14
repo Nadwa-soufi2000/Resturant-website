@@ -62,7 +62,7 @@ export default function MostRequestedItems() {
                 <img
                   src={product.image || "/placeholder.svg"}
                   alt={product.title}
-                  className="w-[96%] h-full mx-auto rounded-tl-2xl rounded-tr-2xl"
+                  className="w-[96%] h-full mx-auto rounded-tl-2xl rounded-tr-2xl object-cover"
                 />
                 {/* Subscription Badge */}
                 <div className="absolute top-3 right-3 w-[100px] h-[27px] font-medium bg-white/20 text-center text-white px-3 py-1 rounded text-[10px]">
@@ -72,20 +72,22 @@ export default function MostRequestedItems() {
 
               {/* Content Container */}
               <div className="flex flex-col justify-center items-center flex-1 p-1 w-[217px] h-[199px] mx-auto bg-white">
-                {/* Title */}
-                <h3 className="text-[20px] font-medium text-[#2F2A25]">{product.title}</h3>
+                <div className="space-y-2">
+                   {/* Title */}
+                   <h3 className="text-[20px] font-medium text-[#2F2A25]">{product.title}</h3>
 
-                {/* Description */}
-                <p className="text[14px] font-normal text-[#6F675F]">{product.description}</p>
+                   {/* Description */}
+                   <p className="text[14px] font-normal text-[#6F675F]">{product.description}</p>
 
-                {/* Spacer to push content to bottom */}
-                <div className="flex-1" />
+                   {/* Spacer to push content to bottom */}
+                   <div className="flex-1" />
 
-                {/* Price Section */}
-                <div className="flex items-center justify-center gap-3 mb-4" dir="rtl">
-                  <span className="text-[18px] font-bold text-[#363842]">{product.price}</span>
-                  <span className="text-[#5E6F7A] text-[14px]">{product.originalPrice}</span>
-                </div>
+                   {/* Price Section */}
+                   <div className="flex items-center justify-center gap-5 mb-4" dir="rtl">
+                     <span className="text-[18px] font-bold text-[#363842]">{product.price}</span>
+                     <span className="text-[#5E6F7A] text-[14px]">{product.originalPrice}</span>
+                   </div>
+               </div>
 
                 {/* Add to Cart Button */}
                 <Button

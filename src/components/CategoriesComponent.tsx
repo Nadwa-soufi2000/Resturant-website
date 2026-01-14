@@ -63,14 +63,16 @@ export default function CategoriesComponent() {
     <main className="py-12 px-4">
       <div className="mx-auto w-[1240px] flex flex-col justify-center items-center gap-6">
         <Title title="الأصناف"/>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full justify-items-center">
             {categories.map((item , index) => {
                 return(
                  <Card key={index} className="w-[295px] h-[273px] bg-[#F5F5F5] rounded-[30px] shadow-xl duration-300 transition hover:scale-[1.05] ease-in-out">
                    <CardContent className="mx-auto">
                       <img src={item.img} alt="" className="w-[178px] h-[137px]"/>
-                      <h1 className="font-bold text-[20px] text-center text-[#000000]">{item.name}</h1>
-                      <p className="font-medium text-[20px] text-center text-[#000000]" dir="rtl">صنف في المطعم {item.numOfKinds}</p>
+                      <div className="space-y-2 pt-2">
+                         <h1 className="font-bold text-[20px] text-center text-[#000000]">{item.name}</h1>
+                         <p className="font-medium text-[20px] text-center text-[#000000]" dir="rtl">صنف في المطعم {item.numOfKinds}</p>
+                      </div>
                    </CardContent>
                  </Card>
                 )
