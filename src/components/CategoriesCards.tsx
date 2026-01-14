@@ -126,7 +126,7 @@ export default function CategoriesCards() {
                     className="w-[96%] h-full mx-auto rounded-tl-2xl rounded-tr-2xl"
                   />
                   {/* Subscription Badge */}
-                  <div className="absolute top-3 right-3 w-[100px] h-[27px] font-medium bg-white/20 text-center text-white px-3 py-1 rounded text-[10px]">
+                  <div className="absolute top-3 right-3 w-[100px] h-[27px] font-medium bg-white/20  text-center text-white px-3 py-1 rounded text-[10px]">
                     {product.badge}
                   </div>
                 </div>
