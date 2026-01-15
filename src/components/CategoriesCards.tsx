@@ -1,3 +1,4 @@
+
 import { Star } from "lucide-react"
 import { Button } from "./ui/button"
 import { Card } from "./ui/card"
@@ -99,9 +100,9 @@ export default function CategoriesCards() {
   
     return (
       <main className=" bg-background py-12 px-4">
-        <div className="mx-auto w-[1228px] flex flex-col justify-center items-center gap-6">
+        <div className="mx-auto w-full md:w-[86%] lg:w-[1228px] flex flex-col justify-center items-center gap-6">
           {/* Product Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
             {products.map((product) => (
               <Card
                 key={product.id}
@@ -188,6 +189,3 @@ export default function CategoriesCards() {
       </main>
     )
   }
-  
-  
-
