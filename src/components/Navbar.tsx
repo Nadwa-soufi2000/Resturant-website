@@ -11,7 +11,7 @@ export default function Navbar() {
   const menuItems = ["القائمة", "الأصناف", "الأكثر طلباً", "تواصل معنا"]
 
   return (
-    <nav className="xl:w-full h-20 flex justify-center items-center shadow-[0_0_12px_0_rgba(0,0,0,0.15)] backdrop-blur-[30px] bg-[#F9FAFB]/90 transition-all duration-300">
+    <nav className="xl:w-full h-20 py-2 flex justify-center items-center shadow-[0_0_12px_0_rgba(0,0,0,0.15)] backdrop-blur-[30px] bg-[#F9FAFB]/90 transition-all duration-300">
       {/* Desktop Layout */}
       <div className="hidden xl:flex justify-between items-center w-[1235.19px] h-18.25">
         <div className="flex justify-center items-center gap-2">

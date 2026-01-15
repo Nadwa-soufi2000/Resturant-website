@@ -106,7 +106,7 @@ export default function CategoriesCards() {
             {products.map((product) => (
               <Card
                 key={product.id}
-                className="overflow-hidden relative bg-card shadow-lg hover:shadow-xl rounded-2xl transition-shadow flex flex-col duration-300 transition hover:scale-[1.05] ease-in-out "
+                className="overflow-hidden pt-2 relative bg-card shadow-lg hover:shadow-xl rounded-2xl transition-shadow flex flex-col duration-300 transition hover:scale-[1.05] ease-in-out "
                 style={{
                   width: "282px",
                   height: "387.33px",

@@ -71,12 +71,12 @@ export function Slider() {
       opts={{
         align: "start",
       }}
-      className="w-[220px] sm:w-[400px] md:w-[600px] lg:w-[900px] xl:w-[1201px]"
+      className="w-[200px] sm:w-[440px] md:w-[600px] lg:w-[900px] xl:w-[1201px]"
     >
       <CarouselContent>
         {categories.map((item, index) => (
-          <CarouselItem key={index} className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-            <div className="flex flex-col justify-center items-center gap-2 sm:gap-3 lg:gap-4">
+          <CarouselItem key={index} className="basis-1/1 sm:basis-1/3 md:basis-1/3 lg:basis-1/5">
+            <div className="flex flex-col justify-center items-center mb-3 gap-2 sm:gap-3 lg:gap-4">
               <img
                 src={item.img || "/placeholder.svg"}
                 alt=""

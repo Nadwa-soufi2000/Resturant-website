@@ -42,11 +42,11 @@ export default function MostRequestedItems() {
       <div className="mx-auto w-full md:w-[86%] lg:max-w-[1308px] flex flex-col items-center gap-6">
         <Title title="الأكثر طلباً" />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 w-full">
           {products.map((product) => (
             <Card
               key={product.id}
-              className="overflow-hidden relative bg-card shadow-lg hover:shadow-xl rounded-2xl flex flex-col transition-all duration-300 hover:scale-[1.05] w-full max-w-[368.67px] mx-auto lg:w-[368.67px] h-[422px]"
+              className="overflow-hidden pt-2 relative bg-card shadow-lg hover:shadow-xl rounded-2xl flex flex-col transition-all duration-300 hover:scale-[1.05] w-full max-w-[368.67px] mx-auto lg:w-[368.67px] h-[422px]"
             >
               <div className="absolute z-10 top-0 left-0 bg-[#FE942A] flex items-center justify-center w-11 h-11 text-white rounded-[22px] text-sm font-bold">
                 {product.discount}
