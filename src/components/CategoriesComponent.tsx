@@ -55,7 +55,7 @@ export default function CategoriesComponent() {
   
   return (
     <main className="py-12 px-4">
-      <div className="mx-auto w-full md:w-[86%] lg:w-[100%] xl:w-[1380px] flex flex-col justify-center items-center gap-6">
+      <div className="mx-auto w-full md:w-[86%] lg:w-[100%] xl:w-[1280px] flex flex-col justify-center items-center gap-6">
         <Title title="الأصناف" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full justify-items-center">
           {categories.map((item, index) => {
