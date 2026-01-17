@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const MENU_ITEM_STYLES = "font-normal text-[18px] text-[#6F675F] hover:text-[#2F2A25] hover:font-bold duration-200 ease-in-out cursor-pointer"
 const CART_ICON_STYLES = "rounded-[40px] bg-white flex justify-center items-center"
@@ -8,7 +9,7 @@ const CART_ICON_STYLES = "rounded-[40px] bg-white flex justify-center items-cent
 export default function Navbar() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const menuItems = ["القائمة", "الأصناف", "الأكثر طلباً", "تواصل معنا"]
+  const menuItems = [{text:"القائمة" , href:'/'}, {text:"الأصناف" , href:"/categories"}, {text:"الأكثر طلباً" , href:"/mostRequested"}, {text:"تواصل معنا" , href:"/contactUs"}]
 
   return (
     <nav className="xl:w-full h-20 py-2 flex justify-center items-center shadow-[0_0_12px_0_rgba(0,0,0,0.15)] backdrop-blur-[30px] bg-[#F9FAFB]/90 transition-all duration-300">
@@ -31,9 +32,9 @@ export default function Navbar() {
         </div>
         <ul className="flex justify-between items-center w-99 h-5">
           {menuItems.reverse().map((item) => (
-            <li key={item} className={MENU_ITEM_STYLES}>
-              {item}
-            </li>
+            <Link to={item.href}  className={MENU_ITEM_STYLES}>
+              {item.text}
+            </Link>
           ))}
         </ul>
         <img src="/Navlogo.png" alt="Logo" className="w-[96px] h-[73px]" />
@@ -72,13 +73,12 @@ export default function Navbar() {
         <ul className="flex flex-col items-end px-6 py-4 gap-4">
           {menuItems.map((item, index) => (
             <li
-              key={item}
               className={`font-normal text-[16px] md:text-[18px] text-[#6F675F] hover:text-[#2F2A25] hover:font-bold duration-200 ease-in-out cursor-pointer w-full text-right transition-all hover:translate-x-[-4px] ${
                 mobileMenuOpen ? "animate-in fade-in slide-in-from-top-2" : ""
               }`}
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              {item}
+              {item.text}
             </li>
           ))}
         </ul>
