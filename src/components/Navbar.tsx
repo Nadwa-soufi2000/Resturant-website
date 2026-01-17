@@ -64,7 +64,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`xl:hidden absolute top-20 left-0 right-0 bg-[#F9FAFB]/95 backdrop-blur-[30px] shadow-[0_4px_12px_0_rgba(0,0,0,0.15)] z-50 transition-all duration-300 origin-top ${
+        className={`xl:hidden absolute top-20 left-0 right-0 bg-[#F9FAFB]/95 backdrop-blur-[30px] shadow-[0_4px_12px_0_rgba(0,0,0,0.15)] z-[1] transition-all duration-300 origin-top ${
           mobileMenuOpen
             ? "opacity-100 scale-y-100 translate-y-0"
             : "opacity-0 scale-y-0 -translate-y-4 pointer-events-none"
