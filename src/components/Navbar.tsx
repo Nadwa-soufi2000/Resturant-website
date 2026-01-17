@@ -72,14 +72,15 @@ export default function Navbar() {
       >
         <ul className="flex flex-col items-end px-6 py-4 gap-4">
           {menuItems.map((item, index) => (
-            <li
+            <Link
               className={`font-normal text-[16px] md:text-[18px] text-[#6F675F] hover:text-[#2F2A25] hover:font-bold duration-200 ease-in-out cursor-pointer w-full text-right transition-all hover:translate-x-[-4px] ${
                 mobileMenuOpen ? "animate-in fade-in slide-in-from-top-2" : ""
               }`}
               style={{ animationDelay: `${index * 50}ms` }}
+              to={item.href}
             >
               {item.text}
-            </li>
+            </Link>
           ))}
         </ul>
         <div
