@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Plus } from "lucide-react"
 import Title from "./Title"
+import { useNavigate } from "react-router-dom"
 
 export default function MostRequestedItems() {
+
+  const path = useNavigate()
   const products = [
     {
       id: 1,
@@ -47,6 +50,7 @@ export default function MostRequestedItems() {
             <Card
               key={product.id}
               className="overflow-hidden pt-2 relative bg-card shadow-lg hover:shadow-xl rounded-2xl flex flex-col transition-all duration-300 hover:scale-[1.05] w-full max-w-[368.67px] mx-auto lg:w-[368.67px] h-[422px]"
+              onClick={() => path(`/orderDetails/${product.id}`) }
             >
               <div className="absolute z-10 top-0 left-0 bg-[#FE942A] flex items-center justify-center w-11 h-11 text-white rounded-[22px] text-sm font-bold">
                 {product.discount}

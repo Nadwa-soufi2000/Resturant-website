@@ -1,8 +1,8 @@
-import CategoriesCards from "@/components/CategoriesCards";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Slider } from "@/components/Slider";
 import Title from "@/components/Title";
+import ProductsCards from "@/components/ProductsCards";
 
 export default function Categories() {
   return (
@@ -12,7 +12,7 @@ export default function Categories() {
              <Title title="الأصناف"/>
              <Slider />
           </div>
-        <CategoriesCards />
+        <ProductsCards />
         <Footer/>
     </div>
   )

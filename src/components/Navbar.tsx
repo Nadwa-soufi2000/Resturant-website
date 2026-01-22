@@ -27,12 +27,12 @@ export default function Navbar() {
               <p className="text-[14px] font-medium text-[#A5A5A5]">سلة المشتريات</p>
               <p className="text-[14px] font-normal text-[#6F675F]">3 طلبات</p>
             </div>
-            <img src="/Icon.png" alt="Cart Icon" className={`${CART_ICON_STYLES} p-2 w-[33px] h-[33px]`} />
+            <Link to='/orders'><img src="/Icon.png" alt="Cart Icon" className={`${CART_ICON_STYLES} p-2 w-[33px] h-[33px]`} /></Link>
           </div>
         </div>
         <ul className="flex justify-between items-center w-99 h-5">
-          {menuItems.reverse().map((item) => (
-            <Link to={item.href}  className={MENU_ITEM_STYLES}>
+          {menuItems.reverse().map((item , index) => (
+            <Link to={item.href} key={index}  className={MENU_ITEM_STYLES}>
               {item.text}
             </Link>
           ))}
@@ -78,6 +78,7 @@ export default function Navbar() {
               }`}
               style={{ animationDelay: `${index * 50}ms` }}
               to={item.href}
+              key={index}
             >
               {item.text}
             </Link>
