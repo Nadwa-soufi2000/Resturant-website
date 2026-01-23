@@ -13,6 +13,7 @@ export default function Navbar() {
   const nav = useNavigate()
   const {setChangeStatus} = useContext(status)
   const menuItems = [{text:"القائمة" , href:'/'}, {text:"الأصناف" , href:"/categories"}, {text:"الأكثر طلباً" , href:"/mostRequested"}, {text:"تواصل معنا" , href:"/contactUs"}]
+  setChangeStatus(`${mobileMenuOpen}`) 
 
   return (
     <nav className="xl:w-full h-20 py-2 flex justify-center items-center shadow-[0_0_12px_0_rgba(0,0,0,0.15)] backdrop-blur-[30px] bg-[#F9FAFB]/90 transition-all duration-300">
@@ -55,12 +56,16 @@ export default function Navbar() {
         </div>
 
         <button
-          onClick={() => {setMobileMenuOpen(!mobileMenuOpen) ; setChangeStatus(`${!mobileMenuOpen}`)  }}
+          onClick={() => {setMobileMenuOpen(!mobileMenuOpen) }}
           className="text-[#6F675F] p-2 transition-all duration-300 hover:scale-110 active:scale-95"
           aria-label="Toggle menu"
         >
           <div className="transition-transform duration-300">
-            {mobileMenuOpen ?  <X size={24} />  : <Menu size={24} />}
+            {mobileMenuOpen ? 
+             <X size={24} />  
+             :
+             <Menu size={24} />
+            }
           </div>
         </button>
       </div>
