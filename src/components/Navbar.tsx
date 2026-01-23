@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button"
+import { status } from "@/context/ChangeDropdownStatus"
 import { Menu, X } from "lucide-react"
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import { useContext, useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
 
 const MENU_ITEM_STYLES = "font-normal text-[18px] text-[#6F675F] hover:text-[#2F2A25] hover:font-bold duration-200 ease-in-out cursor-pointer"
 const CART_ICON_STYLES = "rounded-[40px] bg-white flex justify-center items-center"
@@ -9,6 +10,8 @@ const CART_ICON_STYLES = "rounded-[40px] bg-white flex justify-center items-cent
 export default function Navbar() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const nav = useNavigate()
+  const {setChangeStatus} = useContext(status)
   const menuItems = [{text:"القائمة" , href:'/'}, {text:"الأصناف" , href:"/categories"}, {text:"الأكثر طلباً" , href:"/mostRequested"}, {text:"تواصل معنا" , href:"/contactUs"}]
 
   return (
@@ -52,23 +55,24 @@ export default function Navbar() {
         </div>
 
         <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onClick={() => {setMobileMenuOpen(!mobileMenuOpen) ; setChangeStatus(`${!mobileMenuOpen}`)  }}
           className="text-[#6F675F] p-2 transition-all duration-300 hover:scale-110 active:scale-95"
           aria-label="Toggle menu"
         >
           <div className="transition-transform duration-300">
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ?  <X size={24} />  : <Menu size={24} />}
           </div>
         </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`xl:hidden absolute top-20 left-0 right-0 bg-[#F9FAFB]/95 backdrop-blur-[30px] shadow-[0_4px_12px_0_rgba(0,0,0,0.15)] z-[1] transition-all duration-300 origin-top ${
+        className={`xl:hidden absolute top-20 left-0 right-0 bg-[#F9FAFB]/95 backdrop-blur-[30px] shadow-[0_4px_12px_0_rgba(0,0,0,0.15)] transition-all duration-300 origin-top ${
           mobileMenuOpen
             ? "opacity-100 scale-y-100 translate-y-0"
             : "opacity-0 scale-y-0 -translate-y-4 pointer-events-none"
         }`}
+        style={{zIndex : 9999}}
       >
         <ul className="flex flex-col items-end px-6 py-4 gap-4">
           {menuItems.map((item, index) => (
@@ -87,6 +91,7 @@ export default function Navbar() {
         <div
           className="px-6 pb-4 flex justify-end animate-in fade-in slide-in-from-top-2"
           style={{ animationDelay: "200ms" }}
+          onClick={() => nav("/orders")}
         >
           <div className="flex flex-col items-end">
             <p className="text-[14px] font-medium text-[#A5A5A5]">سلة المشتريات</p>
