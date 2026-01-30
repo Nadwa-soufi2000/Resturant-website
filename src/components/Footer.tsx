@@ -46,7 +46,7 @@ function SocialIcon({ icon, alt }: { icon: string; alt: string }) {
   )
 }
 
-function NavLink({ text }: { text: string }) {
+function NavLink({ text } : { text: string }) {
   return (
     <div className="bg-linear-to-r from-[#FFFFFF]/30 to-[#2F2A25] rounded-[12px] pl-[2px] pb-[2px]">
       <p className="w-full md:w-[123px] h-[36px] bg-[#2F2A25] font-medium text-base md:text-[18px] text-[#FFFFFF] rounded-[12px] flex justify-center items-center px-4 md:px-0">
@@ -55,6 +55,3 @@ function NavLink({ text }: { text: string }) {
     </div>
   )
 }
-
-
-//<div className="bg-linear-to-r from-[#FFFFFF]/30 to-[#2F2A25] rounded-[12px] pl-[2px] pb-[2px]"><p className="w-[123px] h-[36px] bg-[#2F2A25] font-medium text-[18px] text-[#FFFFFF] rounded-[12px] flex justify-center items-center">تواصل معنا</p></div>
