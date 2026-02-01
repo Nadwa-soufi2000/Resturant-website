@@ -23,6 +23,7 @@ export default function Navbar() {
           <Button
             variant="default"
             className="bg-[#666666]/5 text-[#2F2A25] text-[15px] font-medium w-[142.19px] h-12 rounded-xl"
+            onClick={() => nav("/dashboard")}
           >
             تسجيل الدخول
           </Button>
@@ -50,6 +51,7 @@ export default function Navbar() {
           <Button
             variant="default"
             className="bg-[#666666]/5 text-[#2F2A25] text-[13px] md:text-[15px] font-medium px-3 md:px-4 h-10 md:h-12 rounded-xl whitespace-nowrap transition-all duration-300 hover:scale-105 hover:bg-[#666666]/10 active:scale-95"
+            onClick={() => nav("/dashboard")}
           >
             تسجيل الدخول
           </Button>

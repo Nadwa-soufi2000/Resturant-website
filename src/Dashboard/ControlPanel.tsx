@@ -67,7 +67,7 @@ export default function ControlPanel() {
   ]
 
   return (
-    <div className="xl:w-[991px] sm:w-[94%] w-full mx-auto  my-[40px]">
+    <div className="xl:w-[991px] sm:w-[94%] w-full mx-auto my-[40px] overflow-x-hidden">
         <div className="xl:w-full w-[97%] xl:px-0 px-4 mx-auto flex justify-between items-center">
           <DropdownMenu>
            <DropdownMenuTrigger asChild>
@@ -128,10 +128,11 @@ export default function ControlPanel() {
               </Button>
             </div>
             <h1 className="text-[20px] font-bold text-[#2F2A25]">الطلبات</h1>
-         </div>
-         <ScrollArea className="h-[450px] xl:w-[1000px] w-full mx-auto">
-           <TableComponent />
-         </ScrollArea>*/}
+         </div>*/}
+           <ScrollArea className="h-[450px] xl:w-[991px] w-[97%] mx-auto">
+             <TableComponent />
+             {/*<ScrollBar orientation="horizontal"/>*/}
+           </ScrollArea>  
     </div>
   )
 }
