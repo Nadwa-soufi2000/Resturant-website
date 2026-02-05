@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button"
 import { status } from "@/context/ChangeDropdownStatus"
 import { Menu, X } from "lucide-react"
 import { useContext, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
+import { LoginForm } from "./LoginForm"
 
 const MENU_ITEM_STYLES = "font-normal text-[18px] text-[#6F675F] hover:text-[#2F2A25] hover:font-bold duration-200 ease-in-out cursor-pointer"
 const CART_ICON_STYLES = "rounded-[40px] bg-white flex justify-center items-center"
@@ -20,13 +20,7 @@ export default function Navbar() {
       {/* Desktop Layout */}
       <div className="hidden xl:flex justify-between items-center w-[1235.19px] h-18.25">
         <div className="flex justify-center items-center gap-2">
-          <Button
-            variant="default"
-            className="bg-[#666666]/5 text-[#2F2A25] text-[15px] font-medium w-[142.19px] h-12 rounded-xl"
-            onClick={() => nav("/dashboard")}
-          >
-            تسجيل الدخول
-          </Button>
+          <LoginForm />
           <div className="flex justify-center items-center gap-1">
             <div className="flex justify-center items-end flex-col">
               <p className="text-[14px] font-medium text-[#A5A5A5]">سلة المشتريات</p>
@@ -48,13 +42,7 @@ export default function Navbar() {
       {/* Mobile & Tablet Layout */}
       <div className="xl:hidden flex justify-between items-center w-full px-4 md:px-6 lg:px-8">
         <div className="flex items-center gap-2">
-          <Button
-            variant="default"
-            className="bg-[#666666]/5 text-[#2F2A25] text-[13px] md:text-[15px] font-medium px-3 md:px-4 h-10 md:h-12 rounded-xl whitespace-nowrap transition-all duration-300 hover:scale-105 hover:bg-[#666666]/10 active:scale-95"
-            onClick={() => nav("/dashboard")}
-          >
-            تسجيل الدخول
-          </Button>
+          <LoginForm />
         </div>
 
         <button

@@ -6,7 +6,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-export function Slider() {
+export function Slider({size} : {size? : string}) {
 
  const categories = [
     {
@@ -71,7 +71,7 @@ export function Slider() {
       opts={{
         align: "start",
       }}
-      className="w-[200px] sm:w-[440px] md:w-[600px] lg:w-[900px] xl:w-[1201px]"
+      className={`w-[200px] sm:w-[440px] md:w-[600px] lg:w-[900px] mx-auto  ${size ? "xl:w-[1019.36px]" : "xl:w-[1201px]"}`}
     >
       <CarouselContent>
         {categories.map((item, index) => (

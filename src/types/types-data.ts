@@ -51,3 +51,10 @@ export type TextAreaFieldProps =
     register: UseFormRegisterReturn, 
     error? : string
 }
+
+export type ProductData = 
+{
+    img: string, 
+    name: string,
+    price: string,
+}

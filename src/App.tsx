@@ -8,6 +8,8 @@ import Dashboardgrid from "./Dashboard/Dashboard-grid"
 import OrdersControlPanel from "./Dashboard/Orders"
 import Notefications from "./Dashboard/Notefications"
 import Profile from "./Dashboard/Profile"
+import Users from "./Dashboard/Users"
+import Menu from "./Dashboard/Menu"
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
             <Route path="orders" element={<OrdersControlPanel/>}></Route>
             <Route path="notefications" element={<Notefications/>}></Route>
             <Route path="profile" element={<Profile/>}></Route>
+            <Route path="users" element={<Users/>}></Route>
+            <Route path="menu" element={<Menu/>}></Route>
           </Route>
        </Routes>
     </div>
