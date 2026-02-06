@@ -1,3 +1,4 @@
+import { AddProduct } from "@/components/dashboard/AddProduct";
 import ProductCard from "@/components/dashboard/ProductCard";
 import { Slider } from "@/components/Slider";
 import { Button } from "@/components/ui/button";
@@ -56,7 +57,7 @@ export default function Menu() {
   ]
 
   return (
-    <div className="w-[1146px] my-[20px] mx-auto">
+    <div className="w-[1146px]  my-[20px] mx-auto">
       <div className="flex flex-col gap-3 justify-between items-center">
           <div className="w-[1086px] h-[50px] flex justify-between items-center">
             <Button className="w-[112px] h-[48px] hover:bg-accent bg-white rounded-[24px] shadow-xl font-medium text-[14px] text-[#FE942A]">إضافة قسم</Button>
@@ -69,7 +70,7 @@ export default function Menu() {
 
       <div className="w-full flex flex-col gap-4 my-[40px] justify-center items-center">
           <div className="w-[1046px] h-[48px] flex justify-between items-center">
-            <Button className="w-[108px] h-[48px] hover:bg-accent bg-white rounded-[24px] shadow-xl font-medium text-[14px] text-[#FE942A]">إضافة منتج</Button>
+            <AddProduct />
             <h1 className="font-medium text-[24px] text-[#474747]">المنتجات</h1>
           </div>
           <div className="bg-[#F5F5F5] w-full flex justify-between items-center">
