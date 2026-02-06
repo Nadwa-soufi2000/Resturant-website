@@ -11,8 +11,12 @@ import {
 import { Field, FieldGroup } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { useNavigate } from "react-router-dom"
 
 export function LoginForm() {
+
+  const nav = useNavigate()
+  
   return (
     <Dialog>
       <form>
@@ -42,7 +46,7 @@ export function LoginForm() {
             </Field>
           </FieldGroup>
           <DialogFooter>
-            <Button variant="default" className="bg-[#666666]/5 text-[#2F2A25] rounded-xl text-[15px] font-medium">تسجيل دخول</Button>
+            <Button onClick={() => nav("/dashboard")} variant="default" className="bg-[#666666]/5 text-[#2F2A25] rounded-xl text-[15px] font-medium">تسجيل دخول</Button>
           </DialogFooter>
         </DialogContent>
       </form>
