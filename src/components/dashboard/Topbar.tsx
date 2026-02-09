@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Topbar() {
   return (
       <nav className="w-full h-[80px] border-b-[1px] shadow-xl border-b-[#666666]/16 bg-[#FFFFFF] flex xl:justify-around justify-center xl:gap-0 gap-2 items-center">
-        <div className=" w-[60%] sm:w-[40%] xl:w-[1050px] h-[40px] flex justify-between items-center">
+        <div className=" w-[80%] sm:w-[40%] xl:w-[1050px] h-[40px] flex justify-between items-center">
             <div className=" w-auto xl:w-[330px] h-[40px] flex justify-between items-center">
               <Link to="/dashboard/profile" className="w-[122px] h-[49px] hover:bg-[#666666]/16 rounded-[10px] flex justify-center items-center gap-1">
                   <div className="flex flex-col items-end justify-center">

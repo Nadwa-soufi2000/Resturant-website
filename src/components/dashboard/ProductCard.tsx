@@ -4,7 +4,7 @@ import { Card, CardContent } from "../ui/card";
 export default function ProductCard({img , name , price} : ProductData) {
   
   return (
-    <Card className="w-[205px] h-[260px] rounded-[20px]  transition-all duration-300 hover:scale-[1.05]  hover:shadow-xl bg-[#FFFFFF] flex flex-col justify-center items-center gap-3">
+    <Card className="w-full sm:w-[205px] h-[260px] rounded-[20px]  transition-all duration-300 hover:scale-[1.05]  hover:shadow-xl bg-[#FFFFFF] flex flex-col justify-center items-center gap-3">
        <CardContent className="mx-auto">
             <img
               src={img || "/placeholder.svg"}

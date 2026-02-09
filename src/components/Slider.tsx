@@ -6,7 +6,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-export function Slider({size} : {size? : string}) {
+export function Slider({size , sizeLg , numOfItemsLg} : {size? : string , sizeLg? : string , numOfItemsLg?: string}) {
 
  const categories = [
     {
@@ -71,11 +71,11 @@ export function Slider({size} : {size? : string}) {
       opts={{
         align: "start",
       }}
-      className={`w-[200px] sm:w-[440px] md:w-[600px] lg:w-[900px] mx-auto  ${size ? "xl:w-[1019.36px]" : "xl:w-[1201px]"}`}
+      className={`w-[200px] sm:w-[440px] ${sizeLg ? "lg:w-[470px] md:w-[400px]" : "lg:w-[900px] md:w-[600px]"} mx-auto  ${size ? "xl:w-[1019.36px]" : "xl:w-[1201px]"}`}
     >
       <CarouselContent>
         {categories.map((item, index) => (
-          <CarouselItem key={index} className="basis-1/1 sm:basis-1/3 md:basis-1/3 lg:basis-1/5">
+          <CarouselItem key={index} className={`basis-1/1 sm:basis-1/3 md:basis-1/3 ${numOfItemsLg ? "lg:basis-1/3 xl:basis-1/5" : "lg:basis-1/5"}`}>
             <div className="flex flex-col justify-center items-center mb-3 gap-2 sm:gap-3 lg:gap-4">
               <img
                 src={item.img || "/placeholder.svg"}
