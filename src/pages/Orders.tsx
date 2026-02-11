@@ -3,30 +3,28 @@ import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { useAction } from "@/context/GlobalContext"
 
-const orders = [
-  {
-    id: 1,
-    name: "بيتزا بيروني",
-    price: "18,000 ل.س",
-    amount: 1,
-    img: "/food2.png",
-  },
-  {
-    id: 2,
-    name: "بيتزا بيروني",
-    price: "18,000 ل.س",
-    amount: 1,
-    img: "/food2.png",
-  },
-  {
-    id: 3,
-    name: "بيتزا بيروني",
-    price: "18,000 ل.س",
-    amount: 1,
-    img: "/food2.png",
-  },
-]
+//const orders = [
+  //{
+    //id: 1,
+    //title: "بيتزا بيروني",
+    //price: "18,000 ل.س",
+    //image: "/food2.png",
+  //},
+  //{
+    //id: 2,
+    //title: "بيتزا بيروني",
+   // price: "18,000 ل.س",
+    //image: "/food2.png",
+ // },
+  //{
+   // id: 3,
+    //title: "بيتزا بيروني",
+    //price: "18,000 ل.س",
+    //image: "/food2.png",
+  //},
+//]
 
 function SummaryRow({
   label,
@@ -50,6 +48,9 @@ function SummaryRow({
 }
 
 export default function Orders() {
+
+  const {Orders} = useAction()
+
   return (
     <div>
       <Navbar />
@@ -82,13 +83,13 @@ export default function Orders() {
 
         {/* Order Items List */}
         <div className="flex w-full flex-col items-center justify-start gap-3 md:w-[727px]">
-          {orders.map((item) => (
+          {Orders.map((item) => (
             <CardOrder
               key={item.id}
               id={item.id}
-              name={item.name}
+              title={item.title}
               price={item.price}
-              img={item.img}
+              image={item.image}
             />
           ))}
         </div>

@@ -5,21 +5,34 @@ import { Card } from "./ui/card"
 import { useContext } from "react"
 import { status } from "@/context/ChangeDropdownStatus"
 import DeleteComponent from "./DeleteComponent"
+import { useAction } from "@/context/GlobalContext"
+import { REMOVE_FROM_TROLLEY } from "@/context/Actions"
 
-export default function CardOrder({ id, name, price, img }: orderObject) {
+export default function CardOrder({ id, title, price, image }: orderObject) {
   const {changeStatus} = useContext(status)
+  const {ActionTrigger} = useAction()
   console.log(changeStatus)
+
+  const DeleteFromTrolly = () => 
+  {
+      ActionTrigger({
+        type : REMOVE_FROM_TROLLEY,
+        payload : { id, title, price, image }
+      })
+  }
 
   return (
     <Card
       id={`${id}`}
       className={`relative flex ${changeStatus === "false" || changeStatus === ""? "z-[1]" : "z-[-1]"}  h-auto min-h-[180px] w-full flex-col-reverse items-center justify-end rounded-[8px] border border-[#666666]/16 bg-card p-4 shadow-lg transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl sm:h-auto sm:flex-row  md:h-[229px] md:w-[727px] md:flex-row pr-2`}
     >
-      <DeleteComponent />
+      <DeleteComponent 
+        DeleteFromTrolly={DeleteFromTrolly}
+      />
       <div className="flex h-auto w-full flex-col items-center justify-end sm:gap-2 gap-6 sm:flex-row sm:items-center lg:h-[186px] lg:w-[617px]">
         {/* Product Details */}
         <div className="flex h-auto w-full flex-col items-center justify-start gap-3 pr-0 text-center sm:items-end sm:text-right md:h-[174px] md:w-[346px] md:gap-4 md:pr-2">
-          <p className="text-[18px] font-medium text-[#2F2A25] sm:text-[20px] md:text-[24.61px]">{name}</p>
+          <p className="text-[18px] font-medium text-[#2F2A25] sm:text-[20px] md:text-[24.61px]">{title}</p>
 
           {/* Rating */}
           <div className="flex h-[20px] w-auto items-center justify-center gap-2 sm:w-[192px] sm:justify-end">
@@ -56,8 +69,8 @@ export default function CardOrder({ id, name, price, img }: orderObject) {
 
         {/* Product Image */}
         <img
-          src={img || "/placeholder.svg"}
-          alt={name}
+          src={image || "/placeholder.svg"}
+          alt={title}
           className="h-[120px] w-[130px] rounded-lg object-cover sm:h-[150px] sm:w-[160px] md:h-[180px] md:w-[194px]"
         />
       </div>

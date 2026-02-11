@@ -2,7 +2,8 @@ import { Trash2 } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
 import { Button } from "./ui/button";
 
-export default function DeleteComponent() {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function DeleteComponent({DeleteFromTrolly} : any) {
   return (
     <Dialog>
         <DialogTrigger>
@@ -13,7 +14,13 @@ export default function DeleteComponent() {
                <DialogTitle>هل أنت متأكد من الحذف ؟</DialogTitle>
            </DialogHeader>
            <div className="flex justify-center items-center mx-auto gap-2">
-              <Button variant="default" className="bg-red-600 rounded-xl text-[15px] text-white font-medium">حذف</Button>
+              <Button 
+                variant="default" 
+                className="bg-red-600 rounded-xl text-[15px] text-white font-medium"
+                onClick={DeleteFromTrolly}
+              >
+                حذف
+              </Button>
               <Button variant="default" className="bg-[#666666]/5 text-[#2F2A25] text-[15px] rounded-xl font-medium">إلغاء</Button>
            </div>
         </DialogContent>

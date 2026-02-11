@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react"
 import { useContext, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { LoginForm } from "./LoginForm"
+import { useAction } from "@/context/GlobalContext"
 
 const MENU_ITEM_STYLES = "font-normal text-[18px] text-[#6F675F] hover:text-[#2F2A25] hover:font-bold duration-200 ease-in-out cursor-pointer"
 const CART_ICON_STYLES = "rounded-[40px] bg-white flex justify-center items-center"
@@ -12,6 +13,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const nav = useNavigate()
   const {setChangeStatus} = useContext(status)
+  const { numOfItems } = useAction()
   const menuItems = [{text:"القائمة" , href:'/'}, {text:"الأصناف" , href:"/categories"}, {text:"الأكثر طلباً" , href:"/mostRequested"}, {text:"تواصل معنا" , href:"/contactUs"}]
   setChangeStatus(`${mobileMenuOpen}`) 
 
@@ -26,7 +28,10 @@ export default function Navbar() {
               <p className="text-[14px] font-medium text-[#A5A5A5]">سلة المشتريات</p>
               <p className="text-[14px] font-normal text-[#6F675F]">3 طلبات</p>
             </div>
-            <Link to='/orders'><img src="/Icon.png" alt="Cart Icon" className={`${CART_ICON_STYLES} p-2 w-[33px] h-[33px]`} /></Link>
+            <Link to='/orders' className={`${CART_ICON_STYLES} relative`}>
+              <span className="w-[15px] h-[15px] right-0 top-[-3%] absolute rounded-full bg-red-600 text-white text-[12px] flex justify-center items-center font-bold">{numOfItems}</span>
+              <img src="/Icon.png" alt="Cart Icon" className={`p-2 w-[33px] h-[33px]`} />
+            </Link>
           </div>
         </div>
         <ul className="flex justify-between items-center w-99 h-5">

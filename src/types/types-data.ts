@@ -4,9 +4,9 @@ import type { UseFormRegisterReturn } from "react-hook-form"
 export type orderObject = 
 {
     id: number,
-    name: string,
+    title: string,
     price: string,
-    img: string
+    image: string
 }
 
 export type childrenStatus = 
@@ -18,6 +18,35 @@ export type contextChangeDropDown =
 {
    changeStatus: string
    setChangeStatus: Dispatch<SetStateAction<string>>;
+}
+
+export type OrderType = 
+{
+    id: number,
+    title: string,
+    price: string,
+    image: string,
+}
+
+export type actionType = 
+  {
+    type : string,
+    payload : OrderType 
+  }
+
+export type stateType = 
+{
+    Orders: OrderType[],
+    numOfProducts: number,
+    numOfItems: number,
+}
+
+export type contextGlobal = 
+{
+    Orders: OrderType[],
+    numOfProducts: number,
+    numOfItems: number,
+    ActionTrigger: React.Dispatch<actionType>
 }
 
 export type statistics = 
