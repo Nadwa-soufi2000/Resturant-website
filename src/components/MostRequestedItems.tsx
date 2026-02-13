@@ -7,7 +7,6 @@ import { useAction } from "@/context/GlobalContext"
 import { ADD_TO_TROLLEY } from "@/context/Actions"
 
 export default function MostRequestedItems() {
-
   //const path = useNavigate()
   const { ActionTrigger , Orders } = useAction()
   const products = [
@@ -47,7 +46,6 @@ export default function MostRequestedItems() {
     <main className="bg-background py-12 px-4">
       <div className="mx-auto w-full md:w-[86%] lg:max-w-[1308px] flex flex-col items-center gap-6">
         <Title title="الأكثر طلباً" />
-
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 w-full">
           {products.map((product) => (
             <Card

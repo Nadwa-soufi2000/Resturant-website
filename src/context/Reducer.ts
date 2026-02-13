@@ -29,7 +29,10 @@ export const reducer = (state : stateType , action : actionType) =>
       return {
          ...state,
          numOfProducts : state.numOfProducts - 1
-      }
+      };
+      
+      default: 
+        return state
 
    }
 }
