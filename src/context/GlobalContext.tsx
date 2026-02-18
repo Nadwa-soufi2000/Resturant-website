@@ -6,7 +6,6 @@ export const Global = createContext<contextGlobal>({} as contextGlobal)
 
 const initialState : stateType = {
     Orders: [] ,
-    numOfProducts: 0 ,
     numOfItems: 0
 }
 
@@ -17,7 +16,6 @@ export default function GlobalContext({children} : childrenStatus) {
   return <Global.Provider 
            value={{
             Orders : state.Orders,
-            numOfProducts: state.numOfProducts,
             numOfItems: state.numOfItems,
             ActionTrigger: dispatch
            }}

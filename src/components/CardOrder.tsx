@@ -2,7 +2,7 @@ import type { orderObject } from "@/types/types-data"
 import { Star } from "lucide-react"
 import { Button } from "./ui/button"
 import { Card } from "./ui/card"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { status } from "@/context/ChangeDropdownStatus"
 import DeleteComponent from "./DeleteComponent"
 import { useAction } from "@/context/GlobalContext"
@@ -11,8 +11,11 @@ import { REMOVE_FROM_TROLLEY } from "@/context/Actions"
 export default function CardOrder({ id, title, price, image }: orderObject) {
   const {changeStatus} = useContext(status)
   const {ActionTrigger} = useAction()
-  console.log(changeStatus)
+  const[amount , setAmount] = useState<number>(1)
 
+  const increaseAmount = () => {setAmount((prev) => prev + 1)}
+  const decreaseAmount = () => {setAmount((prev) => prev - 1)}
+  
   const DeleteFromTrolly = () => 
   {
       ActionTrigger({
@@ -52,13 +55,15 @@ export default function CardOrder({ id, title, price, image }: orderObject) {
               <Button
                 variant="default"
                 className="h-full rounded-none border-r border-muted-foreground/15 text-base font-normal text-orange-500 transition-colors duration-300 hover:bg-muted"
+                onClick={decreaseAmount}
               >
                 -
               </Button>
-              <p className="text-[14px] font-normal text-[#2A2A25] sm:text-[16px]">1</p>
+              <p className="text-[14px] font-normal text-[#2A2A25] sm:text-[16px]">{amount}</p>
               <Button
                 variant="default"
                 className="h-full rounded-none border-l border-[#666666]/16 text-[14px] font-normal text-[#FE942A] transition-colors duration-300 hover:bg-muted sm:text-[16px]"
+                onClick={increaseAmount}
               >
                 +
               </Button>

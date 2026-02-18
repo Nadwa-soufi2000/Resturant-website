@@ -19,18 +19,6 @@ export const reducer = (state : stateType , action : actionType) =>
          numOfItems: state.numOfItems - 1
       };
 
-     case actions.INCREASE_NUM_OF_PRODUCTS : 
-      return {
-         ...state,
-         numOfProducts : state.numOfProducts + 1
-      }
-     
-     case actions.DECREASE_NUM_OF_PRODUCTS : 
-      return {
-         ...state,
-         numOfProducts : state.numOfProducts - 1
-      };
-      
       default: 
         return state
 

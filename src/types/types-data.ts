@@ -37,14 +37,12 @@ export type actionType =
 export type stateType = 
 {
     Orders: OrderType[],
-    numOfProducts: number,
     numOfItems: number,
 }
 
 export type contextGlobal = 
 {
     Orders: OrderType[],
-    numOfProducts: number,
     numOfItems: number,
     ActionTrigger: React.Dispatch<actionType>
 }
