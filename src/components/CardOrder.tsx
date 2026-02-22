@@ -16,7 +16,7 @@ export default function CardOrder({ id, title, price, image }: orderObject) {
   const increaseAmount = () => {setAmount((prev) => prev + 1)}
   const decreaseAmount = () => {setAmount((prev) => prev - 1)}
   
-  const DeleteFromTrolly = () => 
+  const DeleteItem = () => 
   {
       ActionTrigger({
         type : REMOVE_FROM_TROLLEY,
@@ -30,7 +30,7 @@ export default function CardOrder({ id, title, price, image }: orderObject) {
       className={`relative flex ${changeStatus === "false" || changeStatus === ""? "z-[1]" : "z-[-1]"}  h-auto min-h-[180px] w-full flex-col-reverse items-center justify-end rounded-[8px] border border-[#666666]/16 bg-card p-4 shadow-lg transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl sm:h-auto sm:flex-row  md:h-[229px] md:w-[727px] md:flex-row pr-2`}
     >
       <DeleteComponent 
-        DeleteFromTrolly={DeleteFromTrolly}
+        DeleteItem={DeleteItem}
       />
       <div className="flex h-auto w-full flex-col items-center justify-end sm:gap-2 gap-6 sm:flex-row sm:items-center lg:h-[186px] lg:w-[617px]">
         {/* Product Details */}

@@ -7,12 +7,18 @@ import { Table,
          TableHeader, 
          TableRow 
         } from "../ui/table"
+import DeleteComponent from "../DeleteComponent"
 
 export default function UsersTable() {
   const data = [1,2,3,4,5,6,7]
   const styleCell = "border-y border-[#666666]/16 first:border-l last:border-r first:rounded-l-lg last:rounded-r-lg"
   const responsiveCell = "flex xl:table-cell justify-between xl:justify-start items-center text-right before:content-[attr(data-label)] before:text-[12px] before:text-[#6F675F] before:font-medium before:xl:hidden"
+  
 
+  const DeleteItem = () => 
+  {
+    console.log("nnn")
+  }
   return (
     <div className="w-[97%] mx-auto">
       <Table className="w-full my-[20px] border-separate border-spacing-y-3">

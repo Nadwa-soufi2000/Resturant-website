@@ -3,7 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Button } from "./ui/button";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function DeleteComponent({DeleteFromTrolly} : any) {
+export default function DeleteComponent({DeleteItem} : any) {
   return (
     <Dialog>
         <DialogTrigger>
@@ -17,7 +17,7 @@ export default function DeleteComponent({DeleteFromTrolly} : any) {
               <Button 
                 variant="default" 
                 className="bg-red-600 rounded-xl text-[15px] text-white font-medium"
-                onClick={DeleteFromTrolly}
+                onClick={DeleteItem}
               >
                 حذف
               </Button>
