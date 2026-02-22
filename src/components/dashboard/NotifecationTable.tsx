@@ -30,7 +30,7 @@ export default function NotifecationTable() {
               </TableCell>
 
                <TableCell align="right" className={`${styleCell}`}>
-                  <div className="xl:w-[520px] w-[100%] xl:h-[40px] h-auto flex xl:flex-row flex-col justify-between xl:items-center items-end">
+                  <div className="xl:w-[520px] w-[100%] xl:h-[40px] h-auto flex xl:flex-row flex-col xl:gap-0 gap-2 justify-between xl:items-center items-end">
                      <p className="xl:text-[14px] text-[12px] text-[#6F675F] font-medium">عميل قام بإرسال طلب جديد ويحتاج موافقة</p>
                      <div className="flex gap-3 items-center">
                        <h2 className="font-medium xl:text-[20px] text-[15px] text-[#2F2A25]">طلب جديد ORD-1021#</h2>

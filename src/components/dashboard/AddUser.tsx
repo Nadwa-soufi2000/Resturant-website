@@ -10,7 +10,7 @@ export default function AddUser() {
     <Dialog>
        <form className="flex justify-center items-center">
        <DialogTrigger asChild>
-          <Button className="w-[133px] h-[48px] shadow-xl rounded-[24px] font-medium text-[14px] text-[#FE942A]">إضافة مستخدم</Button>
+          <Button className="w-[133px] h-[48px] shadow-xl rounded-[24px] font-medium text-[14px] text-[#FE942A] hover:bg-accent">إضافة مستخدم</Button>
        </DialogTrigger>
        <DialogContent dir="rtl" className="w-[730px] h-[740px] rounded-[8px] border-1 border-[#D2D2D2] shadow-xl">
            <DialogHeader>

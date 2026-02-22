@@ -28,7 +28,7 @@ export default function Profile() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-full xl:w-[991px] mx-auto my-5 sm:pl-0 pl-1 pr-1 md:pr-10 xl:pr-0 flex flex-col items-end gap-4 sm:gap-5 md:gap-6"
+      className="w-full xl:w-[991px] mx-auto my-5 sm:pl-0 pl-1 pr-3 md:pr-10 xl:pr-0 flex flex-col items-end gap-4 sm:gap-5 md:gap-6"
     >
       <h1 className="font-bold text-[18px] sm:text-[19px] md:text-[20px]">معلومات حسابك</h1>
       <p className="text-[#6F675F] text-[12px] sm:text-[13px] md:text-[14px] font-medium">هذه معلومات أساسية عن حسابك</p>

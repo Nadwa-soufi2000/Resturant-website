@@ -4,7 +4,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function OrdersControlPanel() {
   return (
-    <div className=" flex flex-col justify-center items-center mx-auto xl:w-[991px] w-[96%] sm:my-[40px] my-[70px]">
+    <div className=" flex flex-col justify-center items-center mx-auto xl:w-[991px] w-[90%] sm:my-[40px] my-[70px]">
       <div className="xl:w-[991px] w-[95%] h-[48px] flex sm:flex-row flex-col-reverse justify-between sm:items-center items-end">
         <div className="flex justify-center items-center gap-3 w-auto xl:w-[298.58px] h-[48px]">
           <Button

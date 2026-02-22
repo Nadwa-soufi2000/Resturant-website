@@ -14,17 +14,17 @@ export default function UsersTable() {
   const responsiveCell = "flex xl:table-cell justify-between xl:justify-start items-center text-right before:content-[attr(data-label)] before:text-[12px] before:text-[#6F675F] before:font-medium before:xl:hidden"
 
   return (
-    <div className="w-full mx-auto">
+    <div className="w-[97%] mx-auto">
       <Table className="w-full my-[20px] border-separate border-spacing-y-3">
         <TableHeader  className="hidden xl:table-header-group">
           <TableRow className={`h-[46px] w-[988px] mx-auto bg-[#F9FAFB]`}>
-            <TableHead className={`text-[14px] text-[#2F2A25] ${styleCell} font-medium`}>الإجراءات</TableHead>
-            <TableHead className={`text-[14px] text-[#2F2A25] ${styleCell} font-medium`}>رقم الهاتف</TableHead>
-            <TableHead className={`text-[14px] text-[#2F2A25] ${styleCell} font-medium`}>البريد الإلكتروني</TableHead>
-            <TableHead className={`text-[14px] text-[#2F2A25] ${styleCell} font-medium`}>كلمة المرور</TableHead>
-            <TableHead className={`text-[14px] text-[#2F2A25] ${styleCell} font-medium`}>الاسم الكامل</TableHead>
-            <TableHead className={`text-[14px] text-[#2F2A25] ${styleCell} font-medium`}>الصورة</TableHead>
-            <TableHead className={`text-[14px] text-[#2F2A25] ${styleCell} font-medium`}>رقم المستخدم</TableHead>
+            <TableHead className={`text-[14px] w-[20%] text-[#2F2A25] ${styleCell} font-medium`}>الإجراءات</TableHead>
+            <TableHead className={`text-[14px] w-[20%] text-[#2F2A25] ${styleCell} font-medium`}>رقم الهاتف</TableHead>
+            <TableHead className={`text-[14px] w-[20%] text-[#2F2A25] ${styleCell} font-medium`}>البريد الإلكتروني</TableHead>
+            <TableHead className={`text-[14px] w-[20%] text-[#2F2A25] ${styleCell} font-medium`}>كلمة المرور</TableHead>
+            <TableHead className={`text-[14px] w-[20%] text-[#2F2A25] ${styleCell} font-medium`}>الاسم الكامل</TableHead>
+            <TableHead className={`text-[14px] w-[20%] text-[#2F2A25] ${styleCell} font-medium`}>الصورة</TableHead>
+            <TableHead className={`text-[14px] w-[20%] text-[#2F2A25] ${styleCell} font-medium`}>رقم المستخدم</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody className="">
@@ -49,30 +49,30 @@ export default function UsersTable() {
 
                <TableCell 
                  data-label="رقم الهاتف"
-                 className={`text-right ${responsiveCell} ${styleCell}`}
+                 className={`  ${responsiveCell} ${styleCell}`}
                >
-                 <p className="text-[14px] text-[#6F675F]">1234450968</p>
+                 <p className="text-[14px] text-left text-[#6F675F]">1234450968</p>
               </TableCell>
 
               <TableCell 
                 data-label="بريد الإلكتروني"
-                className={`text-right ${responsiveCell} ${styleCell}`}
+                className={` ${responsiveCell} ${styleCell}`}
               >
-                <h2 className="text-[14px] font-normal text-[#000000]">example@gmail.com</h2>
+                <h2 className="text-[14px] text-left font-normal text-[#000000]">example@gmail.com</h2>
               </TableCell>
 
               <TableCell 
                 data-label="كلمة المرور"
-                className={`text-right ${responsiveCell} ${styleCell}`}
+                className={` ${responsiveCell} ${styleCell}`}
               >
-                <p className="text-[14px] font-normal text-[#000000]">........</p>
+                <p className="text-[14px] text-left font-normal text-[#000000]">........</p>
               </TableCell>
 
                <TableCell 
                  data-label="الاسم الكامل"
-                 className={`${styleCell} ${responsiveCell}`}
+                 className={` ${styleCell} ${responsiveCell}`}
                >
-                <p className="text-[14px] font-normal text-[#000000]">أحمد سالم</p>
+                <p className="text-[14px] text-left font-normal text-[#000000]">أحمد سالم</p>
               </TableCell>
 
               <TableCell 

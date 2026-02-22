@@ -4,7 +4,7 @@ import { CheckCheck, Trash2 } from "lucide-react";
 
 export default function Notifications() {
   return (
-    <div className="w-full max-w-[991px] mx-auto my-5 px-4 flex flex-col gap-6">
+    <div className="w-full xl:w-[991px] mx-auto my-5 px-4 flex flex-col gap-6">
       {/* Header */}
       <div className="w-full flex flex-col-reverse sm:flex-row sm:justify-between sm:items-center gap-4">
         {/* Actions */}
